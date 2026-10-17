@@ -1,0 +1,30 @@
+body {
+  background: #f4f6f9;
+}
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  @page {
+    size: landscape;
+    margin: 15mm;
+  }
+
+  body {
+    background: white;
+    zoom: 0.8;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block;
+  }
+}
